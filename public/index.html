@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Materialize CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+
+    <!--jQuery library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--StyleSheet-->
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+
+    <header>
+
+        <!--NAV BAR-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons menu">menu</i></a>
+
+                <a href="/index" class="brand-logo">American Traveler</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/form" class="waves-effect waves-light red btn-large">Share your experience too!</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <!--END OF NAVBAR-->
+    </header>
+    <!----------------------------------------------------------------------------------------------------------------->
+
+    <!--SIDENAV-->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <li>
+            <div class="user-view">
+                <a>
+                    <img id="logo" src="./images/LOGOO.png">
+                </a>
+                <!--<a href="#!user"><img class="circle" src="./images/LOGOO.png"></a>-->
+            </div>
+        </li>
+
+        <!--SEARCH-->
+        <h5>Search for City</h5>
+        <form>
+            <!--Input-->
+            <input id="searchCityInput" type="text" name="City Name" placeholder="Enter a City" />
+            <input id="searchCountryInput" type="text" name="Country Name" placeholder="Country" />
+            <!--Button-->
+            <input id="searchCity" type="submit" value="Search" />
+        </form>
+        <!--END OF SEARCH-->
+
+        <li>
+            <div class="divider"></div>
+        </li>
+
+        <li><a id="topFive">Top 5 destinations</a></li>
+        <li><a class="waves-effect" id="topCity1" href="#!" onClick="clickFunc('#topCity1')">Pisco Elqui, Chile</a></li>
+        <li><a class="waves-effect" id="topCity2" href="#!" onClick="clickFunc('#topCity2')">Giant's Causeway, Ireland</a></li>
+        <li><a class="waves-effect" id="topCity3" href="#!" onClick="clickFunc('#topCity3')">Badab-e Surt, Iran</a></li>
+        <li><a class="waves-effect" id="topCity4" href="#!" onClick="clickFunc('#topCity4')">Namje, Nepal</a></li>
+        <li><a class="waves-effect" id="topCity5" href="#!" onClick="clickFunc('#topCity5')">Porto Heli, Greece</a></li>
+    </ul>
+
+    <!--END OF SIDENAV-->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <br>
+    <br>
+    <main>
+        <!--Main container-->
+        <div class="container">
+
+            <!--begining of row-->
+            <div class="row">
+                <div class="col m6 offset-m4">
+
+                    <!-- Button for mobile link to the form page. -->
+
+                    <p><a href="/form" class="hide-on-large-only waves-effect waves-light red btn-large">Share your experience too!</a></p>
+                </div>
+            </div>
+            <!--begining of first row-->
+            <div class="row">
+                <!--First Card-->
+                <div class="col m2 offset-m1">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <!--IMAGE-->
+                            <div id="imgOne"></div>
+                            <!--BUTTON-->
+                            <!--<a href="#pageBottom" class="btn-floating halfway-fab waves-effect waves-light red cardButton1"><i class="material-icons">add</i></a>-->
+                            <a href='#pageBottom'><button class="btn-floating halfway-fab waves-effect waves-light red cardButton1" onClick="clickFunc('#cityOne')"><i class="material-icons">add</i></button></a>
+
+                        </div>
+                        <div class="card-content">
+                            <!--CITY NAME-->
+                            <span id="cityOne"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF FIRST CARD-->
+
+                <!--Second card-->
+                <div class="col m2">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <!--IMAGE-->
+                            <div id="imgTwo"></div>
+                            <!--BUTTON-->
+                            <button class="btn-floating halfway-fab waves-effect waves-light red cardButton2" onClick="clickFunc('#cityTwo')"><i class="material-icons">add</i></button>
+                        </div>
+                        <div class="card-content">
+                            <!--CITY NAME-->
+                            <span id="cityTwo"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF SECOND CARD-->
+
+                <!--Third Card-->
+                <div class="col m2">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <!--IMAGE-->
+                            <div id="imgThree"></div>
+                            <!--BUTTON-->
+                            <button class="btn-floating halfway-fab waves-effect waves-light red cardButton3" onClick="clickFunc('#cityThree')"><i class="material-icons">add</i></button>
+                            <button class="btn-floating halfway-fab waves-effect waves-light red cardButton3" onClick="clickFunc('#cityThree')"><i class="material-icons">add</i></button>
+                        </div>
+                        <div class="card-content">
+                            <!--CITY NAME-->
+                            <span id="cityThree"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF THIRD CARD-->
+
+                <!--Fourth card-->
+                <div class="col m2">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <!--IMAGE-->
+                            <div id="imgFour"></div>
+                            <!--BUTTON-->
+                            <button class="btn-floating halfway-fab waves-effect waves-light red cardButton4" onClick="clickFunc('#cityFour')"><i class="material-icons">add</i></button>
+                        </div>
+                        <div class="card-content">
+                            <!--CITY NAME-->
+                            <span id="cityFour"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF FOURTH CARD-->
+
+                <!--Fith card-->
+                <div class="col m2">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <!--IMAGE-->
+                            <div id="imgFive"></div>
+                            <!--BUTTON-->
+                            <button class="btn-floating halfway-fab waves-effect waves-light red cardButton5" onClick="clickFunc('#cityFive')"><i class="material-icons">add</i></button>
+                        </div>
+                        <div class="card-content">
+                            <!--CITY NAME-->
+                            <span id="cityFive"></span>
+                        </div>
+                    </div>
+                </div>
+                <!--END OF FITH CARD-->
+
+            </div>
+            <!--end of FIRST row-->
+            <!------------------------------------------------------------------------------------------------------------->
+
+
+
+            <!--SECOND ROW-->
+            <div class="row">
+                <div class="col m10 offset-m1">
+                    <!--CARD-->
+                    <div class="card large" id="pageBottom">
+                        <div class="card-content">
+
+                        </div>
+                        <!--CARD TABS-->
+                        <div class="card-tabs">
+                            <ul class="tabs tabs-fixed-width">
+                                <li class="tab"><a href="#test4">Comments</a></li>
+                                <li class="tab"><a class="active" href="#test5">Foreign Traveler Info</a></li>
+                                <li class="tab"><a href="#test6">Photos</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-content grey lighten-4">
+                            <!--CARD CONTENT-->
+                            <!--CONTENT ONE-->
+                            <div id="test4">
+                            </div>
+                            <!--CONTENT TWO-->
+                            <div id="test5">
+                            </div>
+                            <!--CONTENT THREE-->
+                            <div class="carousel carousel-slider center" id="test6">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--END OF SECOND ROW-->
+
+
+            <!--<img id="footerImg" src="./images/footerTwo.png"></img>-->
+
+        </div>
+        <!--end of container-->
+    </main>
+    <!--END OF MAIN CONTENT-->
+    <!----------------------------------------------------------------------------------------------------------------->
+    <!--FOOTER-->
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div align="center" class="container">
+                © 2017 Awesome Group
+            </div>
+        </div>
+    </footer>
+
+
+    <!--JavaScript Materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript" src="./js/populate.js"></script>
+    <script type="text/javascript" src="initializations.js"></script>
+</body>
+
+</html>
